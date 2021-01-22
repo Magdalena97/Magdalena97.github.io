@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+    <title>Zadanie z koszykiem</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <ul style="margin-top: 20vh; float:left">
+        <li class="table" style="display:table;">
+            <ul>
+                <li class="withoutDot">
+                    <img src="B2.jpg"  width="70vw" height="70vw" class="horizontal" id="banan1">
+                    <h3 class="horizontal">Banan 1</h3>
+                    <button  style="background-color: red;" onclick="doKoszyka('banan1')">Dodaj do koszyka</button>
+                </li>
+            </ul>
+        </li>
+        <li class="table" style="display:table; margin: 0 auto;">
+            <ul>
+                <li class="withoutDot">
+                    <img src="B2.jpg" width="70vw" height="60vw" class="horizontal" id="banan2">
+                    <h3 class="horizontal">Banan 2</h3>
+                    <button style="background-color: red;" onclick="doKoszyka('banan2')">Dodaj do koszyka</button>
+                </li>
+            </ul>
+        </li>
+        <li class="table" style="display:table; margin: 0 auto;">
+            <ul >
+                <li class="withoutDot">
+                    <img src="B2.jpg"  width="60vw" height="70vw" class="horizontal" id="banan3">
+                    <h3 class="horizontal">Banan 3</h3>
+                    <button style="background-color: red;"  onclick="doKoszyka('banan3')">Dodaj do koszyka</button>
+                </li>
+            </ul>
+        </li>
+        <li class="table" style="display:table; margin: 0 auto;">
+            <ul>
+                <li class="withoutDot">
+                    <img src="B2.jpg" width="60vw" height="70vw" class="horizontal" id="banan4">
+                    <h3 class="horizontal">Banan 4</h3>
+                    <button style="background-color: red;"onclick="doKoszyka('banan4')">Dodaj do koszyka</button>
+                </li>
+            </ul>
+        </li>
+        <li class="table" style="display:table; margin: 0 auto;">
+            <ul >
+                <li class="withoutDot">
+                    <img src="B2.jpg" width="60vw" height="70vw" class="horizontal" id="banan5">
+                    <h3 class="horizontal">Banan 5</h3>
+                    <button style="background-color: red;" onclick="doKoszyka('banan5')">Dodaj do koszyka</button>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <img src="koszyk.png" width="120vw" height="120vw" class="koszyk">
+    <script>
+        function doKoszyka(bananID) {
+            const polozenie = document.getElementById(bananID).getBoundingClientRect();
+            document.getElementById(bananID).style.animationName = "doKoszyka";
+            document.getElementById(bananID).style.top = `${polozenie.top}px`;
+            document.getElementById(bananID).style.left = `${polozenie.left}px`;
+            document.getElementById(bananID).style.animationTimingFunction = "linear";
+            document.getElementById(bananID).style.animationDuration = "5s";
+        }
+      </script>
+</body>
+</html>

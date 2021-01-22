@@ -1,0 +1,33 @@
+img.horizontal {
+     position: absolute;
+}
+.koszyk {
+    position: absolute;
+    right: 5vw;
+    top: 6vh;
+}
+h3 {
+    margin-right: 6vw;
+    margin-left: 6vw;
+}
+.horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.withoutDot {
+    display: table-cell; 
+}
+ 
+@keyframes doKoszyka {
+    62% {
+        transform: scale(0.6);
+        top: 4vh;
+        left: 90vw;    
+    }
+    100% {
+        transform: scale(0.6);
+        top: 12vh;
+        left: 90vw;     
+    }
+}
